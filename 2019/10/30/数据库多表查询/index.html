@@ -6,15 +6,26 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="数据库多表查询新建两张表：表1：student 截图如下： 表2：course 截图如下：  此时这样建表只是为了演示连接SQL语句，当然实际开发中我们不会这样建表，实际开发中这两个表会有自己不同的主键。）  一、外连接外连接可分为：左连接、右连接、完全外连接。 1、左连接 left join 或 left outer joinSQL语句：select * from student left jo">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/10/30/数据库多表查询/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="数据库多表查询新建两张表：表1：student 截图如下： 表2：course 截图如下：  此时这样建表只是为了演示连接SQL语句，当然实际开发中我们不会这样建表，实际开发中这两个表会有自己不同的主键。）  一、外连接外连接可分为：左连接、右连接、完全外连接。 1、左连接 left join 或 left outer joinSQL语句：select * from student left jo">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-46d001db8e22dc577b50d7dbc945f873_hd.jpg">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-576bc74d8029d75b2555fa7adf7ab7bf_hd.jpg">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-847026cdfbf289010dc9552089b27136_hd.jpg">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-45cec519f8f6edda2a9d1dac6982fa46_hd.jpg">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-113297e72930014252083ad57599f56e_hd.jpg">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-96973b52533af956a665453f4b7b87c0_hd.jpg">
+<meta property="og:updated_time" content="2019-10-30T10:02:09.324Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="数据库多表查询新建两张表：表1：student 截图如下： 表2：course 截图如下：  此时这样建表只是为了演示连接SQL语句，当然实际开发中我们不会这样建表，实际开发中这两个表会有自己不同的主键。）  一、外连接外连接可分为：左连接、右连接、完全外连接。 1、左连接 left join 或 left outer joinSQL语句：select * from student left jo">
+<meta name="twitter:image" content="c:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-46d001db8e22dc577b50d7dbc945f873_hd.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,196 +161,172 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-数据库多表查询" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="数据库多表查询"><a href="#数据库多表查询" class="headerlink" title="数据库多表查询"></a>数据库多表查询</h3><h4 id="新建两张表："><a href="#新建两张表：" class="headerlink" title="新建两张表："></a>新建两张表：</h4><h5 id="表1：student-截图如下："><a href="#表1：student-截图如下：" class="headerlink" title="表1：student 截图如下："></a>表1：student 截图如下：</h5><p><img src="C:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-46d001db8e22dc577b50d7dbc945f873_hd.jpg" alt></p>
+<h5 id="表2：course-截图如下："><a href="#表2：course-截图如下：" class="headerlink" title="表2：course 截图如下："></a>表2：course 截图如下：</h5><p><img src="C:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-576bc74d8029d75b2555fa7adf7ab7bf_hd.jpg" alt></p>
+<p> 此时这样建表只是为了演示连接SQL语句，当然实际开发中我们不会这样建表，实际开发中这两个表会有自己不同的主键。） </p>
+<h3 id="一、外连接"><a href="#一、外连接" class="headerlink" title="一、外连接"></a>一、外连接</h3><p>外连接可分为：左连接、右连接、完全外连接。</p>
+<h5 id="1、左连接-left-join-或-left-outer-join"><a href="#1、左连接-left-join-或-left-outer-join" class="headerlink" title="1、左连接 left join 或 left outer join"></a>1、左连接 left join 或 left outer join</h5><p>SQL语句：select * from student left join course on student.ID=course.ID</p>
+<p>执行结果：</p>
+<p><img src="C:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-847026cdfbf289010dc9552089b27136_hd.jpg" alt></p>
+<p>左外连接包含left join左表所有行，如果左表中某行在右表没有匹配，则结果中对应行右表的部分全部为空(NULL).</p>
+<p>注：此时我们不能说结果的行数等于左表数据的行数。当然此处查询结果的行数等于左表数据的行数，因为左右两表此时为一对一关系。</p>
+<h5 id="2、右连接-right-join-或-right-outer-join"><a href="#2、右连接-right-join-或-right-outer-join" class="headerlink" title="2、右连接 right join 或 right outer join"></a>2、右连接 right join 或 right outer join</h5><p>SQL语句：select * from student right join course on student.ID=course.ID</p>
+<p>执行结果：</p>
+<p><img src="C:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-45cec519f8f6edda2a9d1dac6982fa46_hd.jpg" alt></p>
+<p>右外连接包含right join右表所有行，如果左表中某行在右表没有匹配，则结果中对应左表的部分全部为空(NULL)。</p>
+<p>注：同样此时我们不能说结果的行数等于右表的行数。当然此处查询结果的行数等于左表数据的行数，因为左右两表此时为一对一关系。</p>
+<h5 id="3、完全外连接-full-join-或-full-outer-join"><a href="#3、完全外连接-full-join-或-full-outer-join" class="headerlink" title="3、完全外连接 full join 或 full outer join"></a>3、完全外连接 full join 或 full outer join</h5><p>SQL语句：select * from student full join course on student.ID=course.ID</p>
+<p>执行结果</p>
+<p><img src="C:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-113297e72930014252083ad57599f56e_hd.jpg" alt></p>
+<p> 完全外连接包含full join左右两表中所有的行，如果右表中某行在左表中没有匹配，则结果中对应行右表的部分全部为空(NULL)，如果左表中某行在右表中没有匹配，则结果中对应行左表的部分全部为空(NULL)。 </p>
+<h3 id="二、内连接-join-或-inner-join"><a href="#二、内连接-join-或-inner-join" class="headerlink" title="二、内连接 join 或 inner join"></a>二、内连接 join 或 inner join</h3><p>SQL语句：select * from student inner join course on student.ID=course.ID</p>
+<p>执行结果：</p>
+<p><img src="C:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-96973b52533af956a665453f4b7b87c0_hd.jpg" alt></p>
+<p>inner join 是比较运算符，只返回符合条件的行。</p>
+<p>此时相当于：select * from student,course where student.ID=course.ID</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/30/数据库多表查询 2/" class="archive-article-date">
-  	<time datetime="2019-10-30T10:07:51.703Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-30</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/30/数据库多表查询/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/30/数据库多表查询/" class="archive-article-date">
-  	<time datetime="2019-10-30T10:01:29.931Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-30</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/30/jsp简单注册显示/" class="archive-article-date">
-  	<time datetime="2019-10-30T09:31:02.651Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-30</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2019/10/30/数据库多表查询 2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/10/30/jsp简单注册显示/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/17/javaSE（标准版） javaEE（企业版） javaME（微型版）/" class="archive-article-date">
-  	<time datetime="2019-10-17T10:57:21.159Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/17/数据库的简单创建/" class="archive-article-date">
-  	<time datetime="2019-10-17T10:21:58.876Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/Java oop 总结/" class="archive-article-date">
-  	<time datetime="2019-10-13T11:01:35.635Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/主 人 很 欢 迎 你 !!/" class="archive-article-date">
-  	<time datetime="2019-10-13T06:13:33.178Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-13T05:46:17.832Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/13/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -362,8 +349,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

@@ -6,15 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="数据库多表查询 2交叉连接 cross join1.概念：没有 WHERE 子句的交叉联接将产生连接所涉及的表的笛卡尔积。第一个表的行数乘以第二个表的行数等于笛卡尔积结果集的大小。SQL语句：select * from student cross join course 执行结果：  如果我们在此时给这条SQL加上WHERE子句的时候比如SQL:select * from student cros">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/10/30/数据库多表查询 2/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="数据库多表查询 2交叉连接 cross join1.概念：没有 WHERE 子句的交叉联接将产生连接所涉及的表的笛卡尔积。第一个表的行数乘以第二个表的行数等于笛卡尔积结果集的大小。SQL语句：select * from student cross join course 执行结果：  如果我们在此时给这条SQL加上WHERE子句的时候比如SQL:select * from student cros">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-2001ae20a1b4221e1ea32b10297f8ac5_hd.jpg">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-38e14420208da7a956f3c059b2e8b3c8_hd.jpg">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-919d6f65ca51025221615ab9025c7c2e_hd.jpg">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-c501adc94b51e075850808265fba3ce0_hd.jpg">
+<meta property="og:image" content="c:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-197167cc58bce5686526afcde82bb786_hd.jpg">
+<meta property="og:updated_time" content="2019-10-30T10:07:51.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="数据库多表查询 2交叉连接 cross join1.概念：没有 WHERE 子句的交叉联接将产生连接所涉及的表的笛卡尔积。第一个表的行数乘以第二个表的行数等于笛卡尔积结果集的大小。SQL语句：select * from student cross join course 执行结果：  如果我们在此时给这条SQL加上WHERE子句的时候比如SQL:select * from student cros">
+<meta name="twitter:image" content="c:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-2001ae20a1b4221e1ea32b10297f8ac5_hd.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,196 +160,166 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-数据库多表查询 2" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="数据库多表查询-2"><a href="#数据库多表查询-2" class="headerlink" title="数据库多表查询 2"></a>数据库多表查询 2</h3><h4 id="交叉连接-cross-join"><a href="#交叉连接-cross-join" class="headerlink" title="交叉连接 cross join"></a>交叉连接 cross join</h4><h5 id="1-概念：没有-WHERE-子句的交叉联接将产生连接所涉及的表的笛卡尔积。第一个表的行数乘以第二个表的行数等于笛卡尔积结果集的大小。"><a href="#1-概念：没有-WHERE-子句的交叉联接将产生连接所涉及的表的笛卡尔积。第一个表的行数乘以第二个表的行数等于笛卡尔积结果集的大小。" class="headerlink" title="1.概念：没有 WHERE 子句的交叉联接将产生连接所涉及的表的笛卡尔积。第一个表的行数乘以第二个表的行数等于笛卡尔积结果集的大小。"></a>1.概念：没有 WHERE 子句的交叉联接将产生连接所涉及的表的笛卡尔积。第一个表的行数乘以第二个表的行数等于笛卡尔积结果集的大小。</h5><p>SQL语句：select * from student cross join course</p>
+<p>执行结果：</p>
+<p><img src="C:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-2001ae20a1b4221e1ea32b10297f8ac5_hd.jpg" alt></p>
+<p>如果我们在此时给这条SQL加上WHERE子句的时候比如SQL:select * from student cross join course where student.ID=course.ID</p>
+<p>此时将返回符合条件的结果集，结果和inner join所示执行结果一样。</p>
+<h4 id="两表关系为一对多，多对一或多对多时的连接语句"><a href="#两表关系为一对多，多对一或多对多时的连接语句" class="headerlink" title="两表关系为一对多，多对一或多对多时的连接语句"></a>两表关系为一对多，多对一或多对多时的连接语句</h4><p>当然上面两表为一对一关系，那么如果表A和表B为一对多、多对一或多对多的时候，我们又该如何写连接SQL语句呢？</p>
+<p>其实两表一对多的SQL语句和一对一的SQL语句的写法都差不多，只是查询的结果不一样，当然两表也要略有改动。</p>
+<p>比如表1的列可以改为：</p>
+<p>Sno Name Cno</p>
+<p>表2的列可以改为：</p>
+<p>Cno CName</p>
+<p>这样两表就可以写一对多和多对一的SQL语句了，写法和上面的一对一SQL语句一样。</p>
+<p>下面介绍一下当两表为多对多的时候我们该如何建表以及些SQL语句。</p>
+<p>新建三表：</p>
+<p>表A: student 截图如下：</p>
+<p><img src="C:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-38e14420208da7a956f3c059b2e8b3c8_hd.jpg" alt></p>
+<p>表B: course 截图如下：</p>
+<p><img src="C:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-919d6f65ca51025221615ab9025c7c2e_hd.jpg" alt></p>
+<p> 表C: student_course 截图如下： </p>
+<p><img src="C:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-c501adc94b51e075850808265fba3ce0_hd.jpg" alt></p>
+<p>一个学生可以选择多门课程，一门课程可以被多个学生选择，因此学生表student和课程表course之间是多对多的关系。</p>
+<p>当两表为多对多关系的时候，我们需要建立一个中间表student_course，中间表至少要有两表的主键，当然还可以有别的内容。</p>
+<p>SQL语句：select s.Name,C.Cname from student_course as sc left join student as s on s.Sno=sc.Sno left join course as c on c.Cno=sc.Cno</p>
+<p>执行结果：</p>
+<p><img src="C:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5Cv2-197167cc58bce5686526afcde82bb786_hd.jpg" alt></p>
+<p> 此条SQL执行的结果是学生选课的情况。 </p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/30/数据库多表查询 2/" class="archive-article-date">
-  	<time datetime="2019-10-30T10:07:51.703Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-30</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/30/数据库多表查询 2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/30/数据库多表查询/" class="archive-article-date">
-  	<time datetime="2019-10-30T10:01:29.931Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-30</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/30/jsp简单注册显示/" class="archive-article-date">
-  	<time datetime="2019-10-30T09:31:02.651Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-30</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/30/数据库多表查询/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/17/javaSE（标准版） javaEE（企业版） javaME（微型版）/" class="archive-article-date">
-  	<time datetime="2019-10-17T10:57:21.159Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/17/数据库的简单创建/" class="archive-article-date">
-  	<time datetime="2019-10-17T10:21:58.876Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/Java oop 总结/" class="archive-article-date">
-  	<time datetime="2019-10-13T11:01:35.635Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/主 人 很 欢 迎 你 !!/" class="archive-article-date">
-  	<time datetime="2019-10-13T06:13:33.178Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-13T05:46:17.832Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/13/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -362,8 +342,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
