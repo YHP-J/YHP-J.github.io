@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="jsp入门基础简单总结JSP 六个 页面组成元素 指令 三种  page  格式 &amp;lt;%@ page attr1=”value1” atrr2=”value2”…….%&amp;gt; 其中的属性挺多的 介绍几个常见的  import=“和Java中一样导包” contentType=“text/html,utf-8”默认为。。。iso-8859-1的编码 但是这个编码不支持中文 isErrorPag">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/10/31/jsp入门基础简单总结/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="jsp入门基础简单总结JSP 六个 页面组成元素 指令 三种  page  格式 &amp;lt;%@ page attr1=”value1” atrr2=”value2”…….%&amp;gt; 其中的属性挺多的 介绍几个常见的  import=“和Java中一样导包” contentType=“text/html,utf-8”默认为。。。iso-8859-1的编码 但是这个编码不支持中文 isErrorPag">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-31T06:09:56.215Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="jsp入门基础简单总结JSP 六个 页面组成元素 指令 三种  page  格式 &amp;lt;%@ page attr1=”value1” atrr2=”value2”…….%&amp;gt; 其中的属性挺多的 介绍几个常见的  import=“和Java中一样导包” contentType=“text/html,utf-8”默认为。。。iso-8859-1的编码 但是这个编码不支持中文 isErrorPag">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,238 +154,314 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-jsp入门基础简单总结" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="jsp入门基础简单总结"><a href="#jsp入门基础简单总结" class="headerlink" title="jsp入门基础简单总结"></a>jsp入门基础简单总结</h2><p>JSP 六个 页面组成元素</p>
+<h3 id="指令-三种"><a href="#指令-三种" class="headerlink" title="指令 三种"></a>指令 三种</h3><ol>
+<li><ol>
+<li><h4 id="page"><a href="#page" class="headerlink" title="page"></a>page</h4></li>
+<li><ol>
+<li><p><strong>格式 &lt;%@ page attr1=”value1” atrr2=”value2”…….%&gt;</strong></p>
+<h5 id="其中的属性挺多的-介绍几个常见的"><a href="#其中的属性挺多的-介绍几个常见的" class="headerlink" title="其中的属性挺多的 介绍几个常见的"></a>其中的属性挺多的 介绍几个常见的</h5></li>
+<li><ol>
+<li>import=“和Java中一样导包”</li>
+<li>contentType=“text/html,utf-8”默认为。。。iso-8859-1的编码 但是这个编码不支持中文</li>
+<li>isErrorPage 属性 默认为false 当讲到后面的内置对象时有这个属性的运用</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>include</p>
+</li>
+<li><ol>
+<li>格式：&lt;%@ include file=”文件地址”%&gt;</li>
+<li>将外部文件嵌入JSP文件中的 动作标签里也有一个include</li>
+</ol>
+</li>
+<li><p>taglib 引入标签库</p>
+</li>
+</ol>
+</li>
+<li><p>重点组成元素 有三</p>
+</li>
+<li><ol>
+<li><p><strong>脚本</strong></p>
+</li>
+<li><ol>
+<li><strong>&lt;% 这里放Java代码 （变量 方法 语句）%&gt;</strong></li>
+<li><strong>在这里的变量是局部变量 出了这个代码块就没得啦</strong></li>
+</ol>
+</li>
+<li><p><strong>声明</strong></p>
+</li>
+<li><ol>
+<li><strong>&lt;%! 这里定义Java 变量和方法 有分号 %&gt;</strong></li>
+<li><strong>这里定义的 变量是 成员变量 方法是 全局方法</strong></li>
+</ol>
+</li>
+<li><p><strong>输出表达式</strong></p>
+</li>
+<li><ol>
+<li><strong>&lt;%= balabala%&gt;</strong></li>
+<li><strong>尽量用输出表达式输出 而不用out.println()输出 而且表达式比脚本中的out.println()先输出</strong></li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>注释 有三</p>
+</li>
+<li><ol>
+<li>HTML部分的注释 同html语法 <!--注释部分--></li>
+<li>JSP部分的注释 &lt;%–注释部分–%&gt;</li>
+<li>Java代码中的 // /<em>enter(/</em> */)</li>
+</ol>
+</li>
+<li><p>静态内容 这东西说实话 我现在还不太清楚</p>
+</li>
+</ol>
+<p>JSP九大内置对象</p>
+<p>常用有 Out Request Response Session Application</p>
+<p>然后 Page PageContext Exception Config</p>
+<ol>
+<li><p>out JspWriter 类的实例</p>
+</li>
+<li><ol>
+<li><p>就是用来向页面输出的</p>
+</li>
+<li><p>方法</p>
+</li>
+<li><ol>
+<li>记住这些就好了吧 void println() 输出 关于这个输出之后有一个和Print Writer的对比</li>
+<li>void clear() 清空并不将数据发送至客户端 如果在这个方法之前加了 flush() 方法 会抛出异常 意思就是用了clear() 这个方法就不让你输出啦</li>
+<li>void flush() 刷新 也就是输出缓冲区中的数据</li>
+<li>void clearBuffer() 在之前加flush方法 不会有异常 且会将缓冲区的东西输出 注意与之前clear()的区别 （更新这里有歧义 在在flush（）方法之后用 clearBuffer会将缓冲区之前的东西输出 而用clear()方法 则会报错 clearBuffer（）方法是不会将缓冲区的东西输出的 是flush()方法输出） ok</li>
+<li>boolean isAutoFlush() 设置当缓冲区满了 之后 是清空还是抛出异常 默认true=清空</li>
+<li>int getBufferSize() 获得缓冲区字节大小 int getRemaining()获取缓冲区还有多少字节</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>request HttpServletRequest类的实例</p>
+</li>
+<li><ol>
+<li><p>每当客户端请求一个页面时JSP 引擎会创建一个新的对象 ，这个对象代表客户端的请求 通过它 可以得到一些<strong>属性</strong> 和协议信息</p>
+</li>
+<li><p>具体方法</p>
+</li>
+<li><ol>
+<li>String getParameter(String name) 返回name 的cparameter value</li>
+<li>因为所有的request请求都是ISO-8859-1的，而在页面采用的是utf-8编码方式，所以在遇到中文时，将获取到的数据通过String的构造方法使用指定的编码类型重新构造一个String对象。</li>
+<li>&lt;%= “name:”+new String(request.getParameter(“name”).getBytes(“ISO-8859-1”),”utf-8”) %&gt;</li>
+<li><strong>保存参数</strong> 传递到后面的页面进行处理 这时就需要 void setAttribute(String name) 将name的value存储起来</li>
+<li>获取客户端信息好多方法 不写了</li>
+<li>还有一个有意思的 request.getLocale();获取国际化信息 得到本地所使用的语言</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>response HttpServletResponse类的实例 很少直接使用 响应用户请求的信息 对当前页面有用</p>
+</li>
+<li><ol>
+<li><p>首先 response.getWriter() 也是向页面输出内容 PrintWriter pw = response.getWriter(); pw.print(“输出”); 同时有内置对象 out.print(“输出”)的时候 会首先输出PringWriter中的数据</p>
+</li>
+<li><p>String getCharacterEncoding() 返回响应用的编码</p>
+</li>
+<li><ol>
+<li>void setContentType(String type) 设置响应的MIME类型 关于MIME类型 Multipurpose Internet MailExtensions<br>多功能Internet邮件扩充服务，它是一种多用途网际邮件扩充协议，MIME类型就是设定某种扩展名的文件用一种应用程序来打开的方式类型，当该扩展名文件被访问的时候，浏览器会自动使用指定应用程序来打开。</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><ol>
+<li><strong>sendRedirect（） 请求重定向</strong> 重点理解 对比 request 的request.getrequestDispatcher().forward(req,resp) response的请求重定向 是告诉你这个东西不在我这儿你去别的地方吧 然后指向一个页面 所以相当于两次请求 地址栏会变 response对象不同 参数不会保存 而 request的方法 是说啊 这东西我不会啊 我要别人来帮你吧 所以是一次请求 地址栏不变 参数给了“别人”</li>
+</ol>
+</li>
+<li><p><strong>session</strong> HttpSession类的实例 当你浏览第一个网页的时候自动创建一个Session ID 然后每个请求都会带上这个ID，证明你是同一个人 当所有会话页面都被关闭时 你就会被服务区忘掉 在此进入时又会创建一个ID 这些ID的销毁有三种情况 1 服务器重启 2. 过了session的最大无动作时间 3.用了session.invalidate()方法</p>
+</li>
+<li><ol>
+<li>long getCreationTime()字面意思 单位毫秒</li>
+<li>pubic String getID() 字面意思</li>
+<li>public Object setAttribure(String name,Object value):设置一个会话级别的属性</li>
+<li>public Object getAttribure(String name) String[] getValueNames() 有设置 当然有获取 前者获取某个属性的值 后者获取有那些属性 返回他们的名字</li>
+<li>int getMaxInactiveInterval() :关于无动作最大时间</li>
+</ol>
+</li>
+<li><p>application ServletContext实例 存放全局变量 用户之间共享 于服务器启动创建 于服务器关闭时销毁 这个东西可以和Java中的static 属性某个用户改变了它属性的值 会对其他用户有影响 （用户=session？）</p>
+</li>
+<li><ol>
+<li>设置和 获取属性 public void setAttrubute(String name ,Object value) public Object getAttribute(String name) Enumeration getAttribute(）返回所有可用属性</li>
+<li>String getServerInfo() 返回JSP 引擎和版本号</li>
+</ol>
+</li>
+<li><p>page 指当前页面 就类似于this 吧 java.lang.Object 类的实例</p>
+</li>
+<li><ol>
+<li>方法同Object类</li>
+</ol>
+</li>
+<li><p>pageContext 提供了对JSP 页面对象 和名字 空间的访问 页面功能的集大成者</p>
+</li>
+<li><ol>
+<li>JspWriter getOut() 获得 out对象</li>
+<li>获得各种内置对象 out session page request response</li>
+<li>请求转发 void forward（String relativeUrlPath）</li>
+<li>请求包含 void include(String relativeUrlPath)</li>
+<li>属性的作用范围 四种作用域 page request session application 之后再说好吧</li>
+<li>int getAttributeScope(String name) 返回值 1为page 2 request 3 session 4application</li>
+</ol>
+</li>
+<li><p>exception 异常啊同Java啊 要使用必须在 page指令里将isErrorPage()=”true”</p>
+</li>
+<li><ol>
+<li>String toString ()</li>
+<li>void printStacktrace()</li>
+</ol>
+</li>
+<li><p>config</p>
+</li>
+<li><ol>
+<li>可以获取服务器相关的信息 （ServletContext对象 ） 和初始化参数</li>
+</ol>
+</li>
+</ol>
+<p>解释一下四种作用域吧</p>
+<p><strong>page：当前页面，也就是只要跳到别的页面就失效了<br>request：一次会话，简单的理解就是一次请求范围内有效<br>session：浏览器进程，只要当前页面没有被关闭（没有被程序强制清除），不管怎么跳转都是有效的<br>application：服务器，只要服务器没有重启（没有被程序强制清除），数据就有效</strong></p>
+<p>request：</p>
+<p>request里的变量可以跨越forward前后的两页。但是只要刷新页面，它们就重新计算了。如果把变量放到request里，就说明它的作用域是request，它的有效范围是当前请求周期。</p>
+<p>所谓请求周期，就是指从http请求发起，到服务器处理结束，返回响应的整个过程。在这个过程中可能使用forward的方式跳转了多个jsp页面，在这些页面里你都可以使用这个变量。</p>
+<p>还记的request.getrequestDispatcher().forward(req,resp)和sendRedirect() 的区别 如果用sendRedirect() request里的变量就失效了哦</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/31/jsp入门基础简单总结/" class="archive-article-date">
-  	<time datetime="2019-10-31T06:09:53.724Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-31</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/31/jsp入门基础简单总结/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/31/jsp 域对象 和内置对象/" class="archive-article-date">
-  	<time datetime="2019-10-31T06:00:29.094Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-31</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/30/数据库多表查询 2/" class="archive-article-date">
-  	<time datetime="2019-10-30T10:07:51.703Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-30</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/31/jsp 域对象 和内置对象/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/30/数据库多表查询/" class="archive-article-date">
-  	<time datetime="2019-10-30T10:01:29.931Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-30</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/30/jsp简单注册显示/" class="archive-article-date">
-  	<time datetime="2019-10-30T09:31:02.651Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-30</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/17/javaSE（标准版） javaEE（企业版） javaME（微型版）/" class="archive-article-date">
-  	<time datetime="2019-10-17T10:57:21.159Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/17/数据库的简单创建/" class="archive-article-date">
-  	<time datetime="2019-10-17T10:21:58.876Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-17</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/Java oop 总结/" class="archive-article-date">
-  	<time datetime="2019-10-13T11:01:35.635Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/主 人 很 欢 迎 你 !!/" class="archive-article-date">
-  	<time datetime="2019-10-13T06:13:33.178Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-13T05:46:17.832Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/13/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -404,8 +484,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
