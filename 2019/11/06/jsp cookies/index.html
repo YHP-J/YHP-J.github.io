@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2019 | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="jsp cookies一.什么是cookies？ 　　cookies给网站和用户带来的好处非常多： 　　1、Cookie能使站点跟踪特定访问者的访问次数、最后访问时间和访问者进入站点的路径　　2、Cookie能告诉在线广告商广告被点击的次数，从而可以更精确的投放广告 　　3、Cookie有效期限未到时，Cookie能使用户在不键入密码和用户名的情况下进入曾经浏览过的一些站点 　　4、Cookie能">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2019/page/2/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/11/06/jsp cookies/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="jsp cookies一.什么是cookies？ 　　cookies给网站和用户带来的好处非常多： 　　1、Cookie能使站点跟踪特定访问者的访问次数、最后访问时间和访问者进入站点的路径　　2、Cookie能告诉在线广告商广告被点击的次数，从而可以更精确的投放广告 　　3、Cookie有效期限未到时，Cookie能使用户在不键入密码和用户名的情况下进入曾经浏览过的一些站点 　　4、Cookie能">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-06T00:10:14.975Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="jsp cookies一.什么是cookies？ 　　cookies给网站和用户带来的好处非常多： 　　1、Cookie能使站点跟踪特定访问者的访问次数、最后访问时间和访问者进入站点的路径　　2、Cookie能告诉在线广告商广告被点击的次数，从而可以更精确的投放广告 　　3、Cookie有效期限未到时，Cookie能使用户在不键入密码和用户名的情况下进入曾经浏览过的一些站点 　　4、Cookie能">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,73 +154,276 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-jsp cookies" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="jsp-cookies"><a href="#jsp-cookies" class="headerlink" title="jsp cookies"></a>jsp cookies</h1><p><strong>一.什么是cookies？</strong></p>
+<p>　　cookies给网站和用户带来的好处非常多：</p>
+<p>　　1、Cookie能使站点跟踪特定访问者的访问次数、最后访问时间和访问者进入站点的路径<br>　　2、Cookie能告诉在线广告商广告被点击的次数，从而可以更精确的投放广告</p>
+<p>　　3、Cookie有效期限未到时，Cookie能使用户在不键入密码和用户名的情况下进入曾经浏览过的一些站点</p>
+<p>　　4、Cookie能帮助站点统计用户个人资料以实现各种各样的个性化服务</p>
+<p>　　在JSP中,我们也可以使用Cookie,来编写一些功能强大的应用程序。</p>
+<p>　　下面,我想介绍一下如何用JSP创建和处理Cookie。</p>
+<p>　　<strong>二．如何创建Cookie</strong> </p>
+<p>　　　<strong>import=”javax.servlet.http.Cookie”</strong></p>
+<p>　　说了这么多，大家一定很想知道JSP是如何创建cookie了。JSP是使用如下的语法格式来创建cookie的：</p>
+<p>　　<strong>Cookie cookie_name =new Cookie(“Parameter”,”Value”);</strong></p>
+<p>　　例如：</p>
+<p>Cookie username_Cookie =new Cookie(“username”,”waynezheng”);<br>response.addCookie(username_Cookie);</p>
+<p>　　解释：JSP是调用Cookie对象相应的构造函数Cookie(name,value)用合适的名字和值来创建Cookie，然后Cookie可以通过HttpServletResponse的addCookie方法加入到Set-Cookie应答头，</p>
+<p>本例中Cookie对象有两个字符串参数：username,waynezheng。注意，名字和值都不能包含空白字符以及下列字符：@ : ;? , “ / [ ] ( ) = </p>
+<p>　　*<em>处理Cookie的属性<br>*</em><br>　　看到这里，有的朋友又要问了：我光知道如何创建Cookie有什么用呀？是呀，光知道如何创建Cookie而不知道怎么使用是不够的。</p>
+<p>在JSP中，程序是通过cookie.setXXX设置各种属性，用cookie.getXXX读出cookie的属性，现在把Cookie的主要属性，及其方法列于下，供大家参考：</p>
+<p>　　</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>方法名</th>
+<th>方法解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>String</td>
+<td>getComment()</td>
+<td>返回cookie中注释,如果没有注释的话将返回空值.</td>
+</tr>
+<tr>
+<td>String</td>
+<td>getDomain()</td>
+<td>返回cookie中Cookie适用的域名. 使用getDomain() 方法可以指示浏览器把Cookie返回给同 一域内的其他服务器,而通常Cookie只返回给与发送它的服务器名字完全相同的服务器。注意域名必须以点开始（例如.yesky.com）</td>
+</tr>
+<tr>
+<td>int</td>
+<td>getMaxAge()</td>
+<td>返回Cookie过期之前的最大时间，以秒计算。</td>
+</tr>
+<tr>
+<td>String</td>
+<td>getName()</td>
+<td>返回Cookie的名字。名字和值是我们始终关心的两个部分，笔者会在后面详细介绍 getName/setName。</td>
+</tr>
+<tr>
+<td>String</td>
+<td>getPath()</td>
+<td>返回Cookie适用的路径。如果不指定路径，Cookie将返回给当前页面所在目录及其子目录下 的所有页面。</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>getSecure()</td>
+<td>如果浏览器通过安全协议发送cookies将返回true值，如果浏览器使用标准协议则返回false值。</td>
+</tr>
+<tr>
+<td>String</td>
+<td>getValue()</td>
+<td>返回Cookie的值。笔者也将在后面详细介绍getValue/setValue。</td>
+</tr>
+<tr>
+<td>int</td>
+<td>getVersion()</td>
+<td>返回Cookie所遵从的协议版本。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>setComment(String purpose)</td>
+<td>设置cookie中注释。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>setDomain(String pattern)</td>
+<td>设置cookie中Cookie适用的域名</td>
+</tr>
+<tr>
+<td>void</td>
+<td>setMaxAge(int expiry)</td>
+<td>以秒计算，设置Cookie过期时间。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>setPath(String uri)</td>
+<td>指定Cookie适用的路径。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>setSecure(boolean flag)</td>
+<td>指出浏览器使用的安全协议，例如HTTPS或SSL。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>setValue(String newValue)</td>
+<td>cookie创建后设置一个新的值。</td>
+</tr>
+<tr>
+<td>void</td>
+<td>setVersion(int v)</td>
+<td>设置Cookie所遵从的协议版本。</td>
+</tr>
+</tbody></table>
+<p>　　<strong>读取客户端的Cookie</strong><br>　　在Cookie发送到客户端前，。JSP将调用，getCookies()方法返回一个HTTP请求头中的内容对应的。你只需要用循环访问该数组的各个元素,调用getName方法检查各个Cookie的名字，直至找到目标Cookie，然后对该Cookie调用getValue方法取得与指定名字关联的值。　　例如　　&lt;％　　　//从提交的HTML表单中获取，用户名<br>　　　String userName=request.getParameter(“username”);</p>
+<p>　　　response.addCookie(theUsername);　　％&gt;　　…………..　　&lt;％　　　Cookie myCookie[]=request.getCookies();//创建一个Cookie对象数组</p>
+<p>　　　Cookie newCookie= myCookie[n];</p>
+<p>　　<strong>设置Cookie的存在时间，及删除Cookie</strong><br>setMaxAge(int expiry)方法来设置Cookie的存在时间负值表示当浏览器关闭时，Cookie将会被删除。零值则是要删除该Cookie</p>
+<p>删除该Cookie　　　deleteNewCookie.setPath(“/“); 　　response.addCookie(deleteNewCookie);　　％&gt; </p>
+<p>虽然现在网页的制作技术比起几年以前已经发展了许多。不过有些时候，Cookie还是能够帮我们很多忙的。接下来，我们就来看看，如何在写JSP文件的时候，用JSP操作Cookie。<br>＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝</p>
+<p><strong>二、 保存写入Cookie</strong></p>
+<p>其实用JSP操作Cookie是非常简单的，我们来看下面一段JSP程序：</p>
+<p>……..(中间略)</p>
+<p>//保存<strong>写入Cookie</strong><br>＜%<br>String cookieName=”Sender”;<br>Cookie cookie=new Cookie(cookieName, “Test_Content”);<br>cookie.setMaxAge(10);  //存活期为10秒<br>response.addCookie(cookie);<br>%＞<br>……..(其他内容)</p>
+<p>这样我们就设置了一个Cookie，很简单吧？</p>
+<p>我们来仔细研究一下这段代码：</p>
+<p>　　Cookie cookie=new Cookie(cookieName, “Test_Content”);</p>
+<p>这一行建立了一个Cookie对象，初始化有两个参数，第一个参数cookieName定义了Cookie的名字，后一个参数，也是一个字符串，定义了Cookie的内容。也就是我们希望网页在用户的机器上标识的文件内容。</p>
+<p>接下来一行：cookie.setMaxAge(10)，调用了Cookie中的setMaxAge方法，设定Cookie在用户机器硬盘上的存活 期为10秒。一个Cookie在用户的硬盘里面存在的时间并不是无限期的，在建立Cookie对象的时候，我们必须制定Cookie的存活期，超过了这个 存活期后，Cookie文件就不再起作用，会被用户的浏览器自行删除。如果我们希望用户在下次访问这个页面的时候，Cookie文件仍然有效而且可以被网 页读出来的话，我们可以将Cookie的存活期设得稍微长一些。比如cookie.setMaxAge(365<em>24</em>60*60)可以让Cookie文件在一年内有效。</p>
+<p><strong>三、 读取出Cookie</strong></p>
+<p>Cookie文件创建好后，自然还需要我们把它读出来，否则我们不是白费力气吗？接下来我们看看如何读出在用户硬盘上的Cookie。</p>
+<p>……..(中间略)</p>
+<p>Name value</p>
+<p>＜%<br>Cookie cookies[]=request.getCookies(); //读出用户硬盘上的Cookie，并将所有的Cookie放到一个cookie对象数组里面<br>Cookie sCookie=null;<br>String svalue=null;<br>String sname=null; </p>
+<p>for(int i=0;i&lt;cookies.length-1;i++{  //用一个循环语句遍历刚才建立的Cookie对象数组<br>sCookie=cookies[i];  //取出数组中的一个Cookie对象</p>
+<p>sname=sCookie.getName(); //取得这个Cookie的名字<br>svalue=sCookie.getValue(); //取得这个Cookie的内容<br>%＞</p>
+<p>＜%<br>}<br>%＞</p>
+<p>　　name 　　　value<br>＜%=name%＞ ＜%=svalue%＞</p>
+<p>……..(其他内容)</p>
+<p>这一小段JSP文件可以读出用户硬盘上的所有有效的Cookie，也就是仍然在存活期内的Cookie文件。并用表格的形式列出每个Cookie的名字和内容。</p>
+<p>我们来逐行分析一下这段代码：<br>Cookie cookies[]=request.getCookies() 我们用request.getCookies()读出用户硬盘上的Cookie，并将所有的Cookie放到一个cookie对象数组里面。<br>接下来我们用一个循环语句遍历刚才建立的Cookie对象数组，我们用sCookie=cookies[i]取出数组中的一个Cookie对象，然后我们 用sCookie.getValue()和sCookie.getName()两个方法来取得这个Cookie的名字和内容。 </p>
+<p>通过将取出来的Cookie的名字和内容放在字符串变量中，我们就能对其进行各种操作了。在上面的例子里，可通过循环语句的遍历，将所有Cookie放在一张表格中进行显示。<br>＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝</p>
+<p><strong>四、 需要注意的一些问题</strong></p>
+<p>通过上面两个简单的例子，可以看到，用JSP进行Cookie的操作，是非常简单的。不过我们在实际操作中还要注意一些问题：</p>
+<p><strong>1. Cookie的兼容性问题</strong></p>
+<p>Cookie的格式有2个不同的版本，第一个版本，我们称为Cookie Version 0，是最初由Netscape公司制定的，也被几乎所有的浏览器支持。而较新的版本，Cookie Version 1，则是根据RFC 2109文档制定的。为了确保兼容性，JAVA规定，前面所提到的涉及Cookie的操作都是针对旧版本的Cookie进行的。而新版本的Cookie目 前还不被Javax.servlet.http.Cookie包所支持。</p>
+<p><strong>2. Cookie的内容</strong></p>
+<p>同样的Cookie的内容的字符限制针对不同的Cookie版本也有不同。在Cookie Version 0中，某些特殊的字符，例如：空格，方括号，圆括号，等于号（=），逗号，双引号，斜杠，问号，@符号，冒号，分号都不能作为Cookie的内容。这也就 是为什么我们在例子中设定Cookie的内容为”Test_Content”的原因。</p>
+<p>虽然在Cookie Version 1规定中放宽了限制，可以使用这些字符，但是考虑到新版本的Cookie规范目前仍然没有为所有的浏览器所支持，因而为保险起见，我们应该在Cookie的内容中尽量避免使用这些字符。(</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/主 人 很 欢 迎 你 !!/" class="archive-article-date">
-  	<time datetime="2019-10-13T06:13:33.178Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/06/jsp cookies/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/13/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-13T05:46:17.832Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-13</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/31/jsp简介/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/13/hello-world/">Hello World</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/archives/2019/">&laquo; Prev</a><a class="page-number" href="/archives/2019/">1</a><span class="page-number current">2</span>
-    </nav>
+  
+
   
 
 
@@ -240,8 +447,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
