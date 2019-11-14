@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Cookies的安全问题 用户不用害怕自己的行踪都被网站掌握,这些信息在一般情况下不会带来什么大麻烦。但Cookies的作用其实是很大的:有些网站据此统计用户信息,可以为用户实现个性化服务,如用户可以在不键入用户名和密码的情况下直接进入曾经浏览的某些站点,Cookies还可以加快浏览网页的速度等。不过,自己被网站悄悄跟踪实在不是件愉快的事,更何况,难免有些恶意站点通过这个“小甜饼”给用户制造点小麻">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/11/14/Cookies的安全问题/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Cookies的安全问题 用户不用害怕自己的行踪都被网站掌握,这些信息在一般情况下不会带来什么大麻烦。但Cookies的作用其实是很大的:有些网站据此统计用户信息,可以为用户实现个性化服务,如用户可以在不键入用户名和密码的情况下直接进入曾经浏览的某些站点,Cookies还可以加快浏览网页的速度等。不过,自己被网站悄悄跟踪实在不是件愉快的事,更何况,难免有些恶意站点通过这个“小甜饼”给用户制造点小麻">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-14T06:22:24.331Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="Cookies的安全问题 用户不用害怕自己的行踪都被网站掌握,这些信息在一般情况下不会带来什么大麻烦。但Cookies的作用其实是很大的:有些网站据此统计用户信息,可以为用户实现个性化服务,如用户可以在不键入用户名和密码的情况下直接进入曾经浏览的某些站点,Cookies还可以加快浏览网页的速度等。不过,自己被网站悄悄跟踪实在不是件愉快的事,更何况,难免有些恶意站点通过这个“小甜饼”给用户制造点小麻">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,235 +154,149 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Cookies的安全问题" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Cookies的安全问题"><a href="#Cookies的安全问题" class="headerlink" title="Cookies的安全问题"></a>Cookies的安全问题</h2><p> 用户不用害怕自己的行踪都被网站掌握,这些信息在一般情况下不会带来什么大麻烦。但Cookies的作用其实是很大的:有些网站据此统计用户信息,可以为用户实现个性化服务,如用户可以在不键入用户名和密码的情况下直接进入曾经浏览的某些站点,Cookies还可以加快浏览网页的速度等。<br>不过,自己被网站悄悄跟踪实在不是件愉快的事,更何况,难免有些恶意站点通过这个“小甜饼”给用户制造点小麻烦,比如把E-mail地址等信息卖给商业网站,使用户的信箱充满垃圾邮件等。所以,随着Cookies技术与用户隐私权的矛盾日益突出,有两个 Cookies的安全问题需要引起用户的关注。<br>1.Cookie欺骗<br>Cookie记录着用户的帐户ID、密码等信息,如果在网上传递,通常使用的是MD5方法加密,这样经过加密后的信息即使被网络上一些别有用心的人截获,通常也看不懂。然而现在遇到的问题是,截获Cookie的人不需要知道这些字符串的含义,而只要把别人的Cookie向服务器提交,并且能够通过验证,他们就可以冒充受害人的身份登陆网站,这种方法叫做Cookie欺骗。Cookie欺骗实现的前提条件是服务器的验证程序存在漏洞,并且冒充者要获得被冒充的人的Cookie信息。目前网站的验证程序要排除所有非法登录是非常困难的,而且获得别人的Cookie是很容易的:用支持Cookie的语言编写一小段代码就可以实现,只要把这段代码放到网络里,那么所有人的Cookie都能够被收集。至于如何防范,目前还没有特效药,只能使用通常的防护方法,不要在论坛里使用重要的密码,也不要使用IE自动保存密码的功能,以及尽量不登陆不了解底细的网站。<br>2.Flash的代码隐患<br>Flash中有一个get URL()函数,Flash可以利用这个函数自动打开指定的网页,因此它可能把用户引向一个包含恶意代码的网站。打个比方,当你在自己电脑上欣赏精美的Flash动画时,动画帧里的代码可能已经悄悄地连上网,并打开了一个极小的包含有特殊代码的页面,这个页面可以收集你的Cookie,也可以做一些其它的事情,比如在你的机器上种植木马甚至格式化你的硬盘等等。对于Flash的这种行为,网站是无法禁止的,因为这是Flash文件的内部行为。因此,对于用户来说,如果是在本地浏览尽量打开防火墙,如果防火墙提示向外发送的数据包并不为你知悉,最好禁止;如果是在Internet上欣赏,最好找一些知名的大网站。 </p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/14/如何防范Cookies中信息被利用/" class="archive-article-date">
-  	<time datetime="2019-11-14T06:23:58.304Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-14</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/14/Cookies的安全问题/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/14/Cookies的安全问题/" class="archive-article-date">
-  	<time datetime="2019-11-14T06:22:21.650Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-14</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/14/什么是Cookies/" class="archive-article-date">
-  	<time datetime="2019-11-14T06:16:40.059Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-14</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+<nav id="article-nav">
+  
+    <a href="/2019/11/14/如何防范Cookies中信息被利用/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/11/14/什么是Cookies/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/06/jsp cookies/" class="archive-article-date">
-  	<time datetime="2019-11-06T00:10:13.319Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-06</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/31/jsp简介/" class="archive-article-date">
-  	<time datetime="2019-10-31T06:16:50.485Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-31</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+        
+        
+    </div>
+</aside>
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/31/jsp入门基础简单总结/" class="archive-article-date">
-  	<time datetime="2019-10-31T06:09:53.724Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-31</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/31/jsp 域对象 和内置对象/" class="archive-article-date">
-  	<time datetime="2019-10-31T06:00:29.094Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-31</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/30/数据库多表查询 2/" class="archive-article-date">
-  	<time datetime="2019-10-30T10:07:51.703Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-30</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/30/数据库多表查询/" class="archive-article-date">
-  	<time datetime="2019-10-30T10:01:29.931Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-30</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/30/jsp简单注册显示/" class="archive-article-date">
-  	<time datetime="2019-10-30T09:31:02.651Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-30</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+
   
 
 
@@ -402,8 +320,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
