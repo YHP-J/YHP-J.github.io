@@ -152,6 +152,76 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-jsp简单注册显示" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="jsp简单注册显示"><a href="#jsp简单注册显示" class="headerlink" title="jsp简单注册显示"></a>jsp简单注册显示</h2><h3 id="1-首先在jsp里面插入from表单"><a href="#1-首先在jsp里面插入from表单" class="headerlink" title="1.首先在jsp里面插入from表单"></a>1.首先在jsp里面插入from表单</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> <span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"as.jsp"</span>  <span class="attr">method</span>=<span class="string">"post"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">table</span> <span class="attr">border</span>=<span class="string">""</span> <span class="attr">cellspacing</span>=<span class="string">""</span> <span class="attr">cellpadding</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">th</span>&gt;</span>提交表<span class="tag">&lt;/<span class="name">th</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span>&gt;</span>用上户 <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"name"</span> <span class="attr">id</span>=<span class="string">"name"</span> <span class="attr">value</span>=<span class="string">""</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span>&gt;</span> 密码 <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"password"</span> <span class="attr">name</span>=<span class="string">"psd"</span> <span class="attr">id</span>=<span class="string">"psd"</span> <span class="attr">value</span>=<span class="string">""</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">tr</span>&gt;</span><span class="tag">&lt;<span class="name">td</span>&gt;</span>爱好 </span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"sd"</span> <span class="attr">value</span>=<span class="string">"篮球"</span> /&gt;</span>篮球</span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"sd"</span> <span class="attr">value</span>=<span class="string">"足球"</span> /&gt;</span>足球</span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"checkbox"</span> <span class="attr">name</span>=<span class="string">"sd"</span><span class="attr">value</span>=<span class="string">"排球"</span> /&gt;</span>排球</span><br><span class="line">	<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"提交"</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">td</span>&gt;</span><span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-再创建一个jsp文件"><a href="#2-再创建一个jsp文件" class="headerlink" title="2.再创建一个jsp文件"></a>2.再创建一个jsp文件</h3><figure class="highlight jsp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">	账号</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	&lt;%</span><br><span class="line">	request.setCharacterEncoding(<span class="string">"UTF-8"</span>);</span><br><span class="line">	response.setCharacterEncoding(<span class="string">"UTF-8"</span>);</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">	%&gt;</span><br><span class="line">	</span><br><span class="line">	&lt;%</span><br><span class="line">	</span><br><span class="line">	String st = request.getParameter(<span class="string">"name"</span>);</span><br><span class="line">	out.println(st);</span><br><span class="line">%&gt;</span><br><span class="line">	&lt;br&gt;</span><br><span class="line">	密码</span><br><span class="line">	&lt;%</span><br><span class="line">	String std = request.getParameter(<span class="string">"psd"</span>);</span><br><span class="line">	out.println(std);</span><br><span class="line">	%&gt;</span><br><span class="line">	&lt;br&gt;</span><br><span class="line">	愛好</span><br><span class="line">	&lt;%</span><br><span class="line">	String sta []= request.getParameterValues(<span class="string">"sd"</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> k=<span class="number">0</span>;k&lt; sta.length;k++)&#123;</span><br><span class="line">	out.println(sta[k]);</span><br><span class="line">	&#125;</span><br><span class="line">	%&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="注释-：request-setCharacterEncoding-“UTF-8”-response-setCharacterEncoding-“UTF-8”-表示代码的编码格式"><a href="#注释-：request-setCharacterEncoding-“UTF-8”-response-setCharacterEncoding-“UTF-8”-表示代码的编码格式" class="headerlink" title="注释 ：request.setCharacterEncoding(“UTF-8”);response.setCharacterEncoding(“UTF-8”);表示代码的编码格式"></a>注释 ：request.setCharacterEncoding(“UTF-8”);response.setCharacterEncoding(“UTF-8”);表示代码的编码格式</h4><h4 id="这样就可以显示："><a href="#这样就可以显示：" class="headerlink" title="这样就可以显示："></a>这样就可以显示：</h4> <form action="as.jsp" method="post">
+    <table border cellspacing cellpadding>
+    <tr><th>提交表</th></tr>
+    <tr><td>用上户 <input type="text" name="name" id="name" value>
+    </td></tr>
+    <tr><td> 密码 <input type="password" name="psd" id="psd" value>
+    </td></tr>
+    <tr><td>爱好 
+    <input type="checkbox" name="sd" value="篮球">篮球
+    <input type="checkbox" name="sd" value="足球">足球
+    <input type="checkbox" name="sd" value="排球">排球
+    <input type="submit" value="提交">
+    </td></tr>
+</table>
+</form> 
+
+<p><img src="C:%5CUsers%5C%E6%9D%A8%E6%B5%A9%E9%B9%8F%5CDesktop%5CQQ%E5%9B%BE%E7%89%8720191030172947.png" alt></p>
+<p>这样简单的注册就完成了</p>
+<p>-</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/30/jsp简单注册显示/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-javaSE（标准版） javaEE（企业版） javaME（微型版）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -496,7 +566,7 @@ new SInner().test();</code></pre><p>}<br>}<br>(2)成员内部类：访问外部�
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 Mr.Yang
+    		&copy; 2020 Mr.Yang
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
